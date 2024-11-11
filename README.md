@@ -155,7 +155,10 @@ pub fn add_to_list(&mut self, item: u128) {
 **Mitigation**: Use efficient storage structures like `BTreeMap` for more scalable storage and apply limits:
 
 ```rust
-pub fn add_to_list(&mut self, item: u128) {     assert!(self.list.len() < 100, "List is full");     self.list.push(item); }
+pub fn add_to_list(&mut self, item: u128) {
+    assert!(self.list.len() < 100, "List is full");
+    self.list.push(item);
+}
 ```
 
 ## Floating-Point Precision Errors
